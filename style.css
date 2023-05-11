@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+:root {
+  --main-bg-color: white;
+  --main-box-shadow: 
+  1px 0 0 0 #dddddd, 
+  0 1px 0 0 #dddddd, 
+  1px 1px 0 0 #dddddd,
+  1px 0 0 0 #dddddd inset, 
+  0 1px 0 0 #dddddd inset;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+.container {
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  filter: drop-shadow(0 0 4px #dddddd);
+}
+.get-weather {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: var(--main-bg-color);
+  box-shadow: var(--main-box-shadow);
+}
+.get-weather input{
+  width: 66%;
+}
+.get-weather button{
+  cursor: pointer;
+}
+#weather-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  background-color: var(--main-bg-color);
+  box-shadow: var(--main-box-shadow);
+  position: relative;
+}
+#weather-info p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+#weather-info #city {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+#weather-info #temp {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+}
+#weather-info img {
+  position: absolute;
+  right: 26px;
+  bottom: 13px;
+}
+#citiesList li{
+  cursor: pointer;
+  list-style: none; 
+  padding: 5px;
+  padding-left: 10px;
+  background-color: var(--main-bg-color);
+  box-shadow: var(--main-box-shadow);
+}
+#citiesList li:last-child{
+  cursor: pointer;
+  list-style: none; 
+  padding: 5px;
+  padding-left: 10px;
+  background-color: var(--main-bg-color);
+  box-shadow: var(--main-box-shadow);
+  border-radius: 0px 0px 5px 5px;
+}
+#citiesList li:hover {
+  background-color: #f5f5f5;
+}
