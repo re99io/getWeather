@@ -17,10 +17,6 @@ jobs:
         run: |
           npm install
 
-      - name: Build
-        run: |
-          npm run build
-
       - name: Deploy
         # https://github.com/marketplace/actions/deploy-to-github-pages
         uses: JamesIves/github-pages-deploy-action@3.6.2
