@@ -7,7 +7,6 @@ on:
 
 jobs:
   deploy-to-gh-pages:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,11 +14,11 @@ jobs:
 
       - name: Install Packages
         run: |
-          yarn install
+          npm install
+
       - name: Build
         run: |
-          npx reveal-md lessons/ --static dist
-          rsync -a -r lessons/ dist/
+          npm run build
 
       - name: Deploy
         # https://github.com/marketplace/actions/deploy-to-github-pages
